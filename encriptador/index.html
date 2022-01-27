@@ -13,15 +13,19 @@
   <main class="main">
     <section class="form box">
       <form action="">
-        <label class='enun'for="input-texto">Solo letras minúsculas, sin acento</label>
-        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui">
-        <input class="btn" type="submit" value="encriptar" id="btn-encriptar">
-        <input class="btn" type="submit" value="desencriptar" id="btn-desencriptar">
+        <h4 class='enun'>Insertar texto:</h4>
+        <p class='enun'for="input-texto">Solo letras minúsculas, sin acento</p>
+        <br>
+        <input class="textInput" type="text" name="input-texto" id="inputTexto" placeholder="Ingrese el texto aqui">
+        <input class="btn" type="submit" value="encriptar" id="btnEncriptar">
+        <input class="btn" type="submit" value="desencriptar" id="btnDesencriptar">
+        <input class="btn" type="submit" value="clear" id="btnClear">
       </form>
     </section>
   
     <section class="msg box">
       <h4 class='enun'>Mensaje encriptado:</h4>
+      <br>
       <input class="text-input" type="text" id="msg"></input>
       <input class="btn" type="submit" value="copiar" id="btn-copy">
     </section>

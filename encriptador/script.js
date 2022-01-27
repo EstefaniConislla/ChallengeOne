@@ -18,3 +18,25 @@ No se permite acentuación de palabras
 Solo letras minusculas
 No se permite acentuación de palabras   
 */
+
+
+const encriptar = document.querySelector(#btnEncriptar);
+const desencriptar = document.querySelector(#btnDescriptar);
+const text = document.querySelector(#inputText);
+const result = document.querySelector(#msgCopy);
+const clear = document.querySelector(#btnClear);
+const copy = document.querySelector(#btnCopy);
+
+
+clear.addEventListener('click', limpiar);
+copy.addEventListener('click', copiar);
+
+function limpiar() {
+    text.value="";
+    result.value="";
+}
+function copy() {
+    result.select();
+    document.execCommand('copy');
+    document.execCommand('copy');
+}
