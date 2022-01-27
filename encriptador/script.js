@@ -21,21 +21,40 @@ No se permite acentuación de palabras
 
 
 const encriptar = document.querySelector(#btnEncriptar);
-const desencriptar = document.querySelector(#btnDescriptar);
-const text = document.querySelector(#inputText);
-const result = document.querySelector(#msgCopy);
+const desencriptar = document.querySelector(#btnDesencriptar).value;
+const text = document.querySelector(#inputTexto).value;
+const result = document.querySelector(#msg);
 const clear = document.querySelector(#btnClear);
 const copy = document.querySelector(#btnCopy);
 
 
 clear.addEventListener('click', limpiar);
 copy.addEventListener('click', copiar);
+encriptar.addEventListener('click', encriptado);
+
+function encriptado() {
+    text = text.replaceAll("e","enter");
+    text = text.replaceAll("i","imes");
+    text = text.replaceAll("a","ai");
+    text = text.replaceAll("o","ober");
+    text = text.replaceAll("u","ufat");
+    result.value= text
+}
+
+function desencriptado(){
+    text = text.replaceAll("e","enter");
+    text = text.replaceAll("i","imes");
+    text = text.replaceAll("a","ai");
+    text = text.replaceAll("o","ober");
+    text = text.replaceAll("u","ufat");
+    result.value= text
+}
 
 function limpiar() {
     text.value="";
     result.value="";
 }
-function copy() {
+function copiar() {
     result.select();
     document.execCommand('copy');
     document.execCommand('copy');
