@@ -37,12 +37,13 @@ function limpiar() {
 }
 clear.addEventListener('click', limpiar);
 
-// const copy = document.getElementById('btnCopy');
-// copy.addEventListener('click', function(copiar){
-//     copiar.preventDefault();
-//     const result = document.getElementById('outputTexto');
-//     console.log(result.value);
-//     result.select();
-//     navigator.clipboard.writeText(result.value)
-// });
+
+const copy = document.getElementById('btnCopy');
+function copiar() {
+    let result = document.getElementById('outputTexto');
+    result.select();
+    navigator.clipboard.writeText(result.value)
+}
+copy.addEventListener('click', copiar);
+copiar.preventDefault();
     
