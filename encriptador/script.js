@@ -1,10 +1,3 @@
-
-
-// const clear = document.getElementById('btnClear');
-// clear.addEventListener('click', limpiar)
-
-
-
 const encriptar = document.getElementById('btnEncriptar');
 function encriptado() {
     let result = document.getElementById('outputTexto');
@@ -17,26 +10,32 @@ function encriptado() {
     text = text.replaceAll("o","ober");
     text = text.replaceAll("u","ufat");
     result.value=text;
-    console.log(result);
 }
 encriptar.addEventListener('click', encriptado);
 
+const desencriptar = document.getElementById('btnDesencriptar');
+function desencriptado() {
+    let result = document.getElementById('outputTexto');
+    let text = document.getElementById('inputTexto').value;
+    text = text.toLowerCase().trim();
+   
+    text = text.replaceAll("enter","e");
+    text = text.replaceAll("imes","i");
+    text = text.replaceAll("ai","a");
+    text = text.replaceAll("ober","o");
+    text = text.replaceAll("ufat","u");
+    result.value=text;
+}
+desencriptar.addEventListener('click', desencriptado);
 
-// const desencriptar = document.getElementById('btnDesencriptar');
-// desencriptar.addEventListener("click", function(e){
-//     e.preventDefault();
-//     const text = document.getElementById('inputTexto');
-//     const result = document.getElementById('outputTexto');
-//     result.value=desencriptado(text.value);
-// })
-
-
-
-
-// function limpiar() {
-//     text.value="";
-//     result.value="";
-// }
+const clear = document.getElementById('btnClear');
+function limpiar() {
+    let result = document.getElementById('outputTexto');
+    let text = document.getElementById('inputTexto');
+    text.value=" ";
+    result.value=" ";
+}
+clear.addEventListener('click', limpiar);
 
 // const copy = document.getElementById('btnCopy');
 // copy.addEventListener('click', function(copiar){
